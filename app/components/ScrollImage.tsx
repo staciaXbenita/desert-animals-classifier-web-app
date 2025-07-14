@@ -38,7 +38,7 @@ export default function ScrollImage() {
   return (
     <Image
       ref={imgRef}
-      src="/sandcat5.jpeg"
+      src="/desert-animals/sandcat5.jpeg"
       alt="Sand cat"
       width={200}
       height={200}
