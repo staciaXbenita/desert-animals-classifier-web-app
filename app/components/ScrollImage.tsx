@@ -15,7 +15,7 @@ export default function ScrollImage() {
 
     const updateTransform = (offset: number) => {
       if (imgRef.current) {
-        imgRef.current.style.transform = `translateX(-${offset}px)`;
+        imgRef.current.style.transform = `translateX(${offset}px)`;
       }
     };
 
@@ -38,19 +38,22 @@ export default function ScrollImage() {
   return (
     <Image
       ref={imgRef}
-      src="/desert-animals/sandcat5.jpeg"
-      alt="Sand cat"
+      src="fox.svg"
+      alt="fox"
       width={200}
       height={200}
       priority
       className="
         pointer-events-none
         absolute           /* take it out of the flow                     */
-        right-0 top-1/2  /* start at right edge, vertically centered    */
+        left-0 top-1/2  /* start at right edge, vertically centered    */
         -translate-y-1/2 /* center on y-axis                            */
         transition-transform
         will-change-transform
+        
       "
+      style={{ filter: "invert(18%) sepia(99%) saturate(7492%) hue-rotate(-1deg) brightness(97%) contrast(108%)" }}
+
     />
   );
 }
