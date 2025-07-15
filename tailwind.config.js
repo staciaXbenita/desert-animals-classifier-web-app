@@ -3,7 +3,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                poppins: ["var(--font-poppins)", "sans-serif"],
+                bitcountGrid: ["var(--font-bitcountGrid)", "sans-serif"],
             },
         },
     },

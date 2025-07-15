@@ -23,14 +23,14 @@ export default async function Home() {
       <div className="min-h-screen sm:p-0 font-[family-name:var(--font-geist-sans)]">
         <main className="flex flex-col gap-[32px] items-center sm:items-start w-full mt-50">
           <div className="flex flex-col items-center sm:items-start bg-blue-100/10 w-full mt-10">
-            <p className="text-[100px] --font-bitcount_grid_double text-center w-full bg-indigo-100/10">Welcome</p>
-            <p className="text-[40px] --font-bitcount_grid_double text-center w-full bg-yellow-100/20">to</p>
+            <p className="text-[100px] font-bitcountGrid text-center w-full bg-indigo-100/10">Welcome</p>
+            <p className="text-[40px] font-bitcountGrid text-center w-full bg-yellow-100/20">to</p>
             <div className="flex items-center justify-center w-full">
               <div className="flex text-center bg-purple-100/20">
-                <p className="text-[20px] --font-bitcount_grid_double text-center bg-red-200/40">lil</p>
-                <p className="text-[50px] --font-bitcount_grid_double text-center bg-green-100/20 mr-6">Desert</p>
+                <p className="text-[20px] font-bitcountGrid text-center bg-red-200/40">lil</p>
+                <p className="text-[50px] font-bitcountGrid text-center bg-green-100/20 mr-6">Desert</p>
               </div>
-              <p className="text-[50px] font-bitcount_grid_double bg-green-100/20 whitespace-nowrap">Animals Classifier!</p>
+              <p className="text-[50px] font-bitcountGrid bg-green-100/20 whitespace-nowrap">Animals Classifier!</p>
             </div>
           </div>
           <div className="w-full bg-gray-100/10 gap-4 h-40 absolute top-130 ">

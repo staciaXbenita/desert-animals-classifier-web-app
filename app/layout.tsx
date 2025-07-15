@@ -17,7 +17,7 @@ const bitcountGrid = localFont({
   src: [
     { path: "./fonts/BitcountGridDouble_Cursive-Black.ttf", weight: "400", style: "normal" },
   ],
-  variable: "--font-bitcount_grid_double",          // <— CSS var Tailwind can use
+  variable: "--font-bitcountGrid",          // <— CSS var Tailwind can use
   display: "swap",
 });
 
