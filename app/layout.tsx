@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,13 +12,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const bitcountGrid = localFont({
-  src: [
-    { path: "./fonts/BitcountGridDouble_Cursive-Black.ttf", weight: "400", style: "normal" },
-  ],
-  variable: "--font-bitcountGrid",          // <— CSS var Tailwind can use
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Desert Animals Classifier",
@@ -32,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={bitcountGrid.variable}>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
