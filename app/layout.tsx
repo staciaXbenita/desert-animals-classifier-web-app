@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Bitcount_Grid_Double from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +11,17 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const bitcountGrid = Bitcount_Grid_Double({
+  src: [
+    { path: "./fonts/BitcountGridDouble_Cursive-Black", weight: "400", style: "normal" },
+    { path: "./fonts/Poppins-Italic.woff2",  weight: "400", style: "italic" },
+    { path: "./fonts/Poppins-Bold.woff2",    weight: "700", style: "normal" },
+    { path: "./fonts/Poppins-BoldItalic.woff2", weight: "700", style: "italic" },
+  ],
+  variable: "--font-bitcount_grid_double",          // <— CSS var Tailwind can use
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bitcountGrid.variable">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
