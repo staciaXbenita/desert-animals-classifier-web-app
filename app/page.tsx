@@ -1,6 +1,6 @@
-import Image from "next/image";
 import AnimalsStrip from './components/AnimalsStrip';
 import ScrollImage from './components/ScrollImage';
+import UploadForm from './components/UploadForm';
 import { promises as fs } from 'fs';
 import path from 'path';
 
@@ -45,6 +45,10 @@ export default async function Home() {
         <div className="w-full justify-center flex">
           <AnimalsStrip images={images}/>
         </div>
+        <div className='bg-pink-100/20 w-full flex justify-center items-center p-4'>
+          <UploadForm />
+        </div>
+        
         <article className="prose mx-auto my-32">
           {[...Array(10)].map((_, i) => (
             <p key={i}>
