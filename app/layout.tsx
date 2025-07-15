@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Bitcount_Grid_Double from "next/font/local";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const bitcountGrid = Bitcount_Grid_Double({
+const bitcountGrid = localFont({
   src: [
     { path: "./fonts/BitcountGridDouble_Cursive-Black.ttf", weight: "400", style: "normal" },
   ],
