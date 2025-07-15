@@ -30,7 +30,7 @@ export default async function Home() {
                 <p className="text-[20px] --font-bitcount_grid_double text-center bg-red-200/40">lil</p>
                 <p className="text-[50px] --font-bitcount_grid_double text-center bg-green-100/20 mr-6">Desert</p>
               </div>
-              <p className="text-[50px] --font-bitcount_grid_double bg-green-100/20 whitespace-nowrap">Animals Classifier!</p>
+              <p className="text-[50px] font-bitcount_grid_double bg-green-100/20 whitespace-nowrap">Animals Classifier!</p>
             </div>
           </div>
           <div className="w-full bg-gray-100/10 gap-4 h-40 absolute top-130 ">
