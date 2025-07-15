@@ -15,10 +15,7 @@ const geistMono = Geist_Mono({
 
 const bitcountGrid = Bitcount_Grid_Double({
   src: [
-    { path: "./fonts/BitcountGridDouble_Cursive-Black", weight: "400", style: "normal" },
-    { path: "./fonts/Poppins-Italic.woff2",  weight: "400", style: "italic" },
-    { path: "./fonts/Poppins-Bold.woff2",    weight: "700", style: "normal" },
-    { path: "./fonts/Poppins-BoldItalic.woff2", weight: "700", style: "italic" },
+    { path: "./fonts/BitcountGridDouble_Cursive-Black.ttf", weight: "400", style: "normal" },
   ],
   variable: "--font-bitcount_grid_double",          // <— CSS var Tailwind can use
   display: "swap",
