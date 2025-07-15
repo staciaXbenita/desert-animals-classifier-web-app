@@ -33,8 +33,7 @@ export default async function Home() {
               <p className="text-[50px] bitcount-grid-double-title bg-green-100/20 whitespace-nowrap">Animals Classifier!</p>
             </div>
           </div>
-          <div className="w-full bg-gray-100/0 gap-4 h-40 absolute top-130">
-            {/* <img src="sandcat5.jpeg" alt="sand cat" className="w-40"/> */}
+          <div className="w-full bg-gray-100/10 gap-4 h-40 absolute top-130 ">
             <ScrollImage />
           </div>
         </main>
