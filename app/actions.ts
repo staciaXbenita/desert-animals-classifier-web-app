@@ -4,7 +4,10 @@ import path from "path";
 import { Client, handle_file } from "@gradio/client";
 
 export async function uploadImage(file: File) {
-    if (!file) return { error: "No image file provided." };
+    if (!file) {
+      console.log("No file provided for upload.");
+      return { error: "No image file provided." };
+    }
     const filename = `${Date.now()}-${file.name.replace(/\s+/g, "_")}`;
     // const filename = "img";
     // make sure the folder exists (dev only – it’s not persisted on Vercel)
