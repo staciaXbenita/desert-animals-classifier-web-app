@@ -59,10 +59,10 @@
   dependencies:
     tslib "^2.4.0"
 
-"@gradio/client@^1.15.5":
-  version "1.15.5"
-  resolved "https://registry.yarnpkg.com/@gradio/client/-/client-1.15.5.tgz#ee933f2819c3e1fdde6389968e0f449025541232"
-  integrity sha512-MflstiFmjsuYi9QpQGoTnVYzAdEC8hVLlXIDbYNkaMfxpy2RHq1bJHl1StV4CP0VwNjaVT0K91pjONDsBcC0Ow==
+"@gradio/client@^1.15.6":
+  version "1.15.6"
+  resolved "https://registry.yarnpkg.com/@gradio/client/-/client-1.15.6.tgz#6d9301f6d955bd329afd27962e7393ff9203a224"
+  integrity sha512-QDUj2uubhp8emy7vSF/27Pn7X/tTiI2kOIL4ymiqClw9ps3DMZnsmUgKg0JSQ0w/ir71kWV0zcmJLtsy2E+KKw==
   dependencies:
     "@types/eventsource" "^1.1.15"
     bufferutil "^4.0.7"
