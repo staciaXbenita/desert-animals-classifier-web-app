@@ -90,7 +90,7 @@ export default async function Home() {
             </p>
           </div>
         </div>
-        <div className="w-full bg-gray-100/10 gap-4 h-40 absolute top-130 ">
+        <div className="w-full bg-blue-100/10 gap-4 h-40 absolute top-130 ">
           <ScrollImage />
         </div>
       </main>
@@ -99,43 +99,14 @@ export default async function Home() {
         <div>OR</div>
         <div>choose from the images we have provided</div>
       </div>
-      <div className="w-full justify-center flex">
+      <div className="flex flex-col w-full justify-center flex my-10 items-center ">
+        <div className="text-[30px] bitcount-grid-double-title text-center w-full pr-100 text-blue-600">
+          Photo Album:
+        </div>
         <AnimalsStrip images={images} />
       </div>
 
       <ClientSide />
-      {/* <div className="bg-pink-100/20 w-full flex justify-center items-center p-4">
-        <UploadForm onUploadComplete={setLastUrl} />
-      </div>
-      {
-        prediction && (
-        <div>
-          <p className="text-lg font-semibold">
-            Classification Result:&nbsp;
-            <span className="font-bold">{prediction.label}</span>
-          </p>
-
-          <p className="text-center text-sm text-slate-600">
-            Confidence:
-            {prediction.confidences.map((c, i) => (
-              <span key={i} className="block">
-                {c.label}: {c.confidence.toFixed(2)}
-              </span>
-            ))}
-          </p>
-        </div>
-      )} */}
-      
-      <article className="prose mx-auto my-32">
-        {[...Array(10)].map((_, i) => (
-          <p key={i}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-            recusandae quia consequuntur vel, nemo doloribus doloremque maxime
-            impedit laudantium repudiandae sed quaerat aliquid reprehenderit at
-            suscipit a beatae fugit aut.
-          </p>
-        ))}
-      </article>
     </div>
   );
 }
