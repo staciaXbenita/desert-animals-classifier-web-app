@@ -39,7 +39,7 @@ export const ClientSide: React.FC = () => {
             </div>
         }
         {prediction && !isPredLoading && (
-          <div className="text-center mt-4 bg-pink-100/80 p-4 rounded-lg w-50">
+          <div className="text-center mt-4 bg-pink-100/80 p-4 rounded-lg w-50 mb-50">
             <div className="font-bold text-black">prediction result: {resultLabel}</div>
             <ul className="list-disc list-inside">
               {resultConfidences.map((item, index) => (
