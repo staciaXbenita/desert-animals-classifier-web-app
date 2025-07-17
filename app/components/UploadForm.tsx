@@ -2,6 +2,7 @@
 import { uploadImage } from "../actions.js";
 import { Upload } from 'lucide-react';
 import Image from "next/image";
+// import { Client, handle_file } from "@gradio/client"; mf cant work here
 
 import React, { useRef, useState, DragEvent, FormEvent, useEffect } from "react";
 
@@ -23,6 +24,23 @@ export default function UploadForm() {
             if (previewUrl) URL.revokeObjectURL(previewUrl);
         };
     }, [previewUrl]);
+
+    // when remoteUrl changes, use the model to predict the image classification
+    useEffect(() => {
+        // const app = await Client.connect("abidlabs/whisper");
+        // const transcription = await app.predict("/predict", [handle_file(audio_file)]);
+        async function classifyImage() {
+            if (!remoteUrl) return;
+            try {
+                // const space = await Client.connect("staciabenita/desert-animals-classifier");
+                // const result = await space.predict("/predict", [handle_file(remoteUrl)]);
+                // handle result here (e.g., set state)
+            } catch (err) {
+                console.error("Classification error:", err);
+            }
+        }
+        classifyImage();
+    }, [remoteUrl])
 
     /* ------------------------------------------------------------ */
     const imageTypes = ["image/jpeg", "image/png", "image/jpg"];
@@ -157,15 +175,8 @@ export default function UploadForm() {
                     <p className="text-center text-sm font-medium text-green-700">
                         Uploaded successfully!
                         <br />
-                        ヾ( ˃ᴗ˂ )◞ • *✰ 
+                        ヾ( ˃ᴗ˂ )◞ • *✰
                     </p>
-                    {/* <Image
-                        src={remoteUrl}
-                        alt="Uploaded"
-                        width={200}
-                        height={200}
-                        className="mx-auto rounded-md object-contain"
-                    /> */}
                 </div>
             )}
             <button
