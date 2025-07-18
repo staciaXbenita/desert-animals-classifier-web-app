@@ -4,6 +4,21 @@ import { promises as fs } from "fs";
 import { rm } from "fs/promises";
 import path from "path";
 import { ClientSide } from "./ClientSide";
+import { Inter, Roboto_Slab } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: '--font-inter',   // ⬅️ important
+  display: 'swap',
+  weight: "400",
+});
+
+const roboto = Roboto_Slab({
+  subsets: ["latin"],
+  variable: '--font-roboto',   // ⬅️ important
+  display: 'swap',
+  weight: "400",
+})
 
 // Server component: fetch images from /public/desert-animals
 async function getVacationImages() {
@@ -34,7 +49,6 @@ async function getUploadedImage() {
   }
 }
 
-
 export default async function Home() {
   const images = await getVacationImages();
 
@@ -42,7 +56,16 @@ export default async function Home() {
     <div className="min-h-screen sm:p-0 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] items-center sm:items-start w-full mt-50">
         <div className="flex flex-col items-center sm:items-start bg-blue-100/10 w-full mt-10">
-          <p className="text-[100px] bitcount-grid-double-title text-center w-full bg-indigo-100/10">
+          {/* <p className="text-[100px] font-bitcount text-center w-full bg-indigo-100/10"> */}
+          <p
+            className={`
+    ${roboto.className}
+    text-[100px]
+    bitcount-grid-double-title
+    text-center
+    w-full
+    bg-indigo-100/10
+  `}>
             Welcome
           </p>
           <p className="text-[40px] bitcount-grid-double-title text-center w-full bg-yellow-100/20">
