@@ -1,12 +1,11 @@
 import AnimalsStrip from "./components/AnimalsStrip";
 import ScrollImage from "./components/ScrollImage";
-// import { UploadForm } from "./components/UploadForm";
 import { promises as fs } from "fs";
 import { rm } from "fs/promises";
 import path from "path";
 import { ClientSide } from "./ClientSide";
 
-// Server component: fetch images from /public/vacation
+// Server component: fetch images from /public/desert-animals
 async function getVacationImages() {
   const vacationDir = path.join(process.cwd(), "public", "desert-animals");
   try {
@@ -39,33 +38,6 @@ async function getUploadedImage() {
 export default async function Home() {
   const images = await getVacationImages();
 
-  // const [lastUrl, setLastUrl] = useState<string | null>(null);
-  // const [prediction,  setPrediction]  = useState<{
-  //   label: string;
-  //   confidences: { label: string; confidence: number }[];
-  // } | null>(null);
-
-
-  // if (lastUrl) {
-  //   const uploadedImage = await getUploadedImage();
-  //   const space = await Client.connect(
-  //     "staciabenita/desert-animals-classifier"
-  //   );
-  //   const localPath = await path.join(
-  //     process.cwd(),
-  //     "public",
-  //     "uploads",
-  //     "img.jpg"
-  //   );
-  //   const result = await space.predict("/predict", [handle_file(localPath)]); //uploadedImage
-
-  //   // extracting the result from the prediction
-  //   const items = result.data;
-  //   const top = items[0];
-  //   const label = top.label;
-  //   const confidences = top.confidences;
-  //   console.log("Classification result:", label, confidences);
-  // }
   return (
     <div className="min-h-screen sm:p-0 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] items-center sm:items-start w-full mt-50">

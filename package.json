@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/blob": "^1.1.1",
     "formidable": "^3.5.4",
     "gradio": "^0.1.0",
     "gradio-client": "^1.0.0",
