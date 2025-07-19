@@ -2,28 +2,17 @@
 @import "tailwindcss";
 
 
-/* Add these at the very top of your globals.css */
-@font-face {
-  font-family: 'Bitcount Grid Double';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url(../public/BitcountGridDouble_Cursive-ExtraBold.ttf) format('truetype');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-
-
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -35,17 +24,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.bitcount-grid-double-title {
-  font-family: "Bitcount Grid Double", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 399;
-  font-style: normal;
-  font-variation-settings:
-    "slnt" -6,
-    "CRSV" 0.5,
-    "ELSH" 0,
-    "ELXP" 0;
+  /* font-family: 'Times New Roman', Times, serif; */
 }
