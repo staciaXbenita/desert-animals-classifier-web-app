@@ -14,3 +14,10 @@ export const bitcountGridDouble = BitCount_Double_Grid({
   variable: '--font-bitcount',   // ⬅️ important
   display: 'swap',
 })
+
+export const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: '--font-geist-mono',   // ⬅️ important
+  display: 'swap',
+  weight: "400",
+})

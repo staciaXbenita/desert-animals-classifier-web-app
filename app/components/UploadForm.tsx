@@ -136,19 +136,19 @@ export const UploadForm: React.FC<UploadFormProps> = ({setUrl}) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto w-full max-w-sm rounded-lg bg-yellow-100 p-4 shadow-xl"
+      className="mx-auto w-full max-w-sm rounded-lg bg-yellow-100 p-4 shadow-xl text-blue-600 selection:text-yellow-700"
     >
-      <h1 className="mb-4 text-center text-xl font-semibold text-slate-800">
+      <h1 className="mb-4 text-center text-xl font-semibold">
         🐫 Upload your own image 🏜️
       </h1>
-      <p className="text-black text-center text-xs pb-2">
+      <p className="text-center text-xs pb-2">
         we can only classify <b>fennec fox, sand cat, meerkat</b>, and{" "}
         <b>prairie dog</b> for the time being
       </p>
 
       <label
         htmlFor="fileInput"
-        className={`flex flex-col items-center gap-3 rounded-lg border-2 border-dashed p-8 text-center text-sm text-slate-600 transition-colors ${
+        className={`flex flex-col items-center gap-3 rounded-lg border-2 border-dashed p-8 text-center text-sm transition-colors ${
           dragOver ? "border-blue-600 bg-blue-50" : "border-slate-300"
         }`}
         onDragOver={handleDragOver}
@@ -176,7 +176,7 @@ export const UploadForm: React.FC<UploadFormProps> = ({setUrl}) => {
       </label>
 
       {fileName && !error && (
-        <p className="mt-2 truncate text-center text-xs text-slate-700">
+        <p className="mt-2 truncate text-center text-xs">
           Selected: <span className="font-medium">{fileName}</span>
         </p>
       )}

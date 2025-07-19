@@ -29,7 +29,7 @@ export const ClientSide: React.FC = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center text-blue-600 selection:text-yellow-100">
         <UploadForm setUrl={setUrl} />
         {isPredLoading && 
             <div>
@@ -40,8 +40,8 @@ export const ClientSide: React.FC = () => {
         }
         {prediction && !isPredLoading && (
           <div className="text-center mt-4 bg-pink-100/80 p-4 rounded-lg w-50 mb-50">
-            <div className="font-bold text-black">prediction result: {resultLabel}</div>
-            <ul className="list-disc list-inside">
+            <div className="text-[20px] font-extrabold">prediction result: {resultLabel}</div>
+            <ul className="list-disc list-inside text-start">
               {resultConfidences.map((item, index) => (
                 <li key={index}>
                   {item.label}: {item.confidence.toFixed(2)}

@@ -2,9 +2,11 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
+import FoxIcon from "./FoxIcon";
 
 export default function ScrollImage() {
   const imgRef = useRef<HTMLImageElement | null>(null);
+  // const svgRef = useRef<SVGSVGElement | null>(null);
 
   useEffect(() => {
     const factor = 0.5; // Increase factor for smoother movement
@@ -16,6 +18,7 @@ export default function ScrollImage() {
     const updateTransform = (offset: number) => {
       if (imgRef.current) {
         imgRef.current.style.transform = `translateX(${offset}px)`;
+        // svgRef.current!.style.transform = `translateX(${offset}px)`;
       }
     };
 
@@ -52,8 +55,11 @@ export default function ScrollImage() {
         will-change-transform
         
       "
-      style={{ filter: "invert(18%) sepia(99%) saturate(7492%) hue-rotate(-1deg) brightness(97%) contrast(108%)" }}
-
+      style={{
+        filter:
+          "invert(14%) sepia(88%) saturate(5374%) hue-rotate(233deg) brightness(91%) contrast(101%)",
+      }}
     />
+    // <FoxIcon ref={svgRef} />
   );
 }
